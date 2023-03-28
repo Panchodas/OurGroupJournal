@@ -1,0 +1,50 @@
+﻿<Window x:Class="OurGroupJournal.Views.Windows.NavigationWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:OurGroupJournal.Views.Windows"
+        mc:Ignorable="d"
+        Title="NavigationWindow"
+        Foreground="DarkGreen"
+        Background="DarkOliveGreen"
+        Height="600"
+        Width="800"
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="NoResize">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="70" />
+            <RowDefinition Height="1*" />
+            <!--<RowDefinition Height="50" />-->
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*" />
+        </Grid.ColumnDefinitions>
+        <StackPanel VerticalAlignment="Center"
+                    HorizontalAlignment="Left"
+                    Orientation="Horizontal">
+            <Button x:Name="ShowRecordsBtn"
+                    Content="Записи"
+                    Width="170"
+                    Margin="5"
+                    Click="ShowRecordsBtn_Click"
+                    Style="{StaticResource AcceptButton}"/>
+            <Button x:Name="ShowStudentsBtn"
+                    Content="Студенты"
+                    Width="170"
+                    Margin="5"
+                    Click="ShowStudentsBtn_Click"
+                    Style="{StaticResource AcceptButton}"/>
+            <Button x:Name="ShowDisciplinesBtn"
+                    Content="Дисциплины"
+                    Width="200"
+                    Margin="5"
+                    Click="ShowDisciplinesBtn_Click"
+                    Style="{StaticResource AcceptButton}"/>
+        </StackPanel>
+        <Frame x:Name="ViewFrame"
+               Grid.Row="1"
+               NavigationUIVisibility="Hidden"/>
+    </Grid>
+</Window>
